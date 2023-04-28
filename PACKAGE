@@ -1,4 +1,4 @@
-Rushikesh R Lagad. (U-38119114)
+
 Package: data and functions related to climate change in the world
 Introduction:
 Climate change is a huge global concern, and comprehending its consequences necessitates access to precise and extensive data. This R package provides users with datasets and functions linked to global climate change. The package offers temperature, precipitation, and sea level data throughout time, as well as data analysis and visualization features.The goal of this R package is to offer users with data and functions linked to global climate change. The package includes datasets containing temperature, precipitation, and sea level data across time, as well as data analysis and visualization utilities.
