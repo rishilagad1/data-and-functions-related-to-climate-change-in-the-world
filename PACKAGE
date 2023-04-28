@@ -1,0 +1,59 @@
+Rushikesh R Lagad. (U-38119114)
+Package: data and functions related to climate change in the world
+Introduction:
+Climate change is a huge global concern, and comprehending its consequences necessitates access to precise and extensive data. This R package provides users with datasets and functions linked to global climate change. The package offers temperature, precipitation, and sea level data throughout time, as well as data analysis and visualization features.The goal of this R package is to offer users with data and functions linked to global climate change. The package includes datasets containing temperature, precipitation, and sea level data across time, as well as data analysis and visualization utilities.
+Purpose:
+The goal of this R package is to give users easy access to data and tools for evaluating and understanding the global consequences of climate change. The package contains a number of datasets and functions that may be used to investigate trends and patterns in climate data across time and to assess the possible implications of climate change on various elements of human and natural systems.
+Importance:
+Climate change is one of the most pressing issues facing the world today, and it is imperative that researchers and policymakers have access to accurate and timely data on its impact. This R package provides a comprehensive collection of climate data and analytical tools to help advance climate change research and make policy decisions to mitigate its impacts. 
+
+For this code we have to install specific necessary R packages:
+install.packages("devtools") # for creating R packages
+install.packages("roxygen2") # for documenting the R package
+Create a new R package using devtools:
+devtools::create("climate_change_pkg")
+Specify which functions will be included in the package. You could, for example, write functions that compute average temperature or precipitation levels for a certain time period.
+Using Roxygen2, add documentation to the functions. This will assist users in comprehending what each function does and how to use it. For example, you could add the following documentation to the function: r
+#' Calculate average temperature for a given time period
+#' 
+#' This function takes in a dataset of temperature readings and calculates the average temperature for a given time period.
+#' 
+#' @param data A data frame containing temperature readings
+#' @param start_date The start date of the time period (in YYYY-MM-DD format)
+#' @param end_date The end date of the time period (in YYYY-MM-DD format)
+#' @return The average temperature for the given time period
+#' @examples
+#' data <- read.csv("temperature_data.csv")
+#' average_temperature(data, "2010-01-01", "2019-12-31")
+average_temperature <- function(data, start_date, end_date) {
+  # function code here
+}
+Create a data folder in the package directory and fill it with climate change data. You could, for example, incorporate datasets containing temperature, precipitation, or sea level data over time.
+Using the data() function, add the data to the package. As an example:
+#' Temperature data for the United States
+#'
+#' This dataset contains temperature readings for the United States from 1950-01-01 to 2020-12-31.
+#'
+#' @format A data frame with 25567 rows and 3 variables:
+#'   \describe{
+#'     \item{date}{Date of the temperature reading}
+#'     \item{location}{Location of the temperature reading}
+#'     \item{temperature}{Temperature reading in Celsius}
+#'   }
+#'
+#' @examples
+#' data(temperature_us)
+"temperature_us" <- read.csv(system.file("extdata", "temperature_us.csv", package = "climate_change_pkg"))
+Build and install the package:
+devtools::document("climate_change_pkg")
+devtools::build("climate_change_pkg")
+install.packages("climate_change_pkg_0.1.0.tar.gz", repos = NULL)
+Finally, test the package to make sure everything works as expected:
+library(climate_change_pkg)
+data(temperature_us)
+average_temperature(temperature_us, "2010-01-01", "2019-12-31")
+
+R package that includes data and functions related to climate change in the world. You can customize your package to include additional functions and datasets as needed.
+
+                                      #.......Thank You…………
+
